@@ -1,0 +1,97 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.10" />
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\" />
+    <None Remove="Entities\" />
+    <None Remove="DbOperations\" />
+    <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
+    <None Remove="Application\" />
+    <None Remove="Application\MovieOperations\" />
+    <None Remove="Application\MovieOperations\CreateMovie\" />
+    <None Remove="Application\MovieOperations\DeleteMovie\" />
+    <None Remove="Application\MovieOperations\UpdateMovie\" />
+    <None Remove="Application\MovieOperations\GetMovieDetails\" />
+    <None Remove="Application\MovieOperations\GetMovies\" />
+    <None Remove="AutoMapper" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="FluentValidation" />
+    <None Remove="Common\" />
+    <None Remove="Middlewares\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Services\" />
+    <None Remove="Application\ActorOperations\" />
+    <None Remove="Application\DirectorOperations\" />
+    <None Remove="Application\CustomerOperations\" />
+    <None Remove="Application\OrderOperations\" />
+    <None Remove="Application\CustomerOperations\CreateCustomer\" />
+    <None Remove="Application\CustomerOperations\DeleteCustomer\" />
+    <None Remove="Application\DirectorOperations\CreateDirector\" />
+    <None Remove="Application\DirectorOperations\DeleteDirector\" />
+    <None Remove="Application\DirectorOperations\GetDirectorDetail\" />
+    <None Remove="Application\DirectorOperations\GetDirectors\" />
+    <None Remove="Application\DirectorOperations\UpdateDirector\" />
+    <None Remove="Application\ActorOperations\CreateActor\" />
+    <None Remove="Application\ActorOperations\DeleteActor\" />
+    <None Remove="Application\ActorOperations\GetActorDetail\" />
+    <None Remove="Application\ActorOperations\GetActors\" />
+    <None Remove="Application\ActorOperations\UpdateActor\" />
+    <None Remove="Application\OrderOperations\CreateOrder\" />
+    <None Remove="Application\OrderOperations\GetOrders\" />
+    <None Remove="TokenOperations\" />
+    <None Remove="TokenOperations\Models\" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Entities\" />
+    <Folder Include="DbOperations\" />
+    <Folder Include="Application\" />
+    <Folder Include="Application\MovieOperations\" />
+    <Folder Include="Application\MovieOperations\CreateMovie\" />
+    <Folder Include="Application\MovieOperations\DeleteMovie\" />
+    <Folder Include="Application\MovieOperations\UpdateMovie\" />
+    <Folder Include="Application\MovieOperations\GetMovieDetail\" />
+    <Folder Include="Application\MovieOperations\GetMovies\" />
+    <Folder Include="Common\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Services\" />
+    <Folder Include="Application\ActorOperations\" />
+    <Folder Include="Application\DirectorOperations\" />
+    <Folder Include="Application\CustomerOperations\" />
+    <Folder Include="Application\OrderOperations\" />
+    <Folder Include="Application\CustomerOperations\CreateCustomer\" />
+    <Folder Include="Application\CustomerOperations\DeleteCustomer\" />
+    <Folder Include="Application\DirectorOperations\CreateDirector\" />
+    <Folder Include="Application\DirectorOperations\DeleteDirector\" />
+    <Folder Include="Application\DirectorOperations\GetDirectorDetail\" />
+    <Folder Include="Application\DirectorOperations\GetDirectors\" />
+    <Folder Include="Application\DirectorOperations\UpdateDirector\" />
+    <Folder Include="Application\ActorOperations\CreateActor\" />
+    <Folder Include="Application\ActorOperations\DeleteActor\" />
+    <Folder Include="Application\ActorOperations\GetActorDetail\" />
+    <Folder Include="Application\ActorOperations\GetActors\" />
+    <Folder Include="Application\ActorOperations\UpdateActor\" />
+    <Folder Include="Application\OrderOperations\CreateOrder\" />
+    <Folder Include="Application\OrderOperations\GetOrders\" />
+    <Folder Include="TokenOperations\" />
+    <Folder Include="TokenOperations\Models\" />
+  </ItemGroup>
+</Project>
