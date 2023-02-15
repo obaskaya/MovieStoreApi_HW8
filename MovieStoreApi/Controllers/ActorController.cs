@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using MovieStoreApi.Application.ActorOperations.CreateActor;
-using MovieStoreApi.Application.ActorOperations.DeleteActor;
-using MovieStoreApi.Application.ActorOperations.GetActorDetail;
-using MovieStoreApi.Application.ActorOperations.GetActors;
-using MovieStoreApi.Application.ActorOperations.UpdateActor;
+using MovieStoreApi.Application.ActorOperations.Commands.CreateActor;
+using MovieStoreApi.Application.ActorOperations.Commands.DeleteActor;
+using MovieStoreApi.Application.ActorOperations.Commands.UpdateActor;
+using MovieStoreApi.Application.ActorOperations.Queries.GetActorDetail;
+using MovieStoreApi.Application.ActorOperations.Queries.GetActors;
 using MovieStoreApi.DbOperations;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860

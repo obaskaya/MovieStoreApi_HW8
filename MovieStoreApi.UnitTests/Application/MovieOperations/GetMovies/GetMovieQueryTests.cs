@@ -1,7 +1,7 @@
 ﻿using System;
 using AutoMapper;
 using FluentAssertions;
-using MovieStoreApi.Application.MovieOperations.GetMovies;
+using MovieStoreApi.Application.MovieOperations.Queries.GetMovies;
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.UnitTests.TestSetup;
 

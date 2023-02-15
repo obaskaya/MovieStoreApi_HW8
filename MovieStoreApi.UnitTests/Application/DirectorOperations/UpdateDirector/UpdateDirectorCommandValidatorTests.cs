@@ -1,6 +1,6 @@
 ﻿using System;
 using FluentAssertions;
-using MovieStoreApi.Application.DirectorOperations.UpdateDirector;
+using MovieStoreApi.Application.DirectorOperations.Commands.UpdateDirector;
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.UnitTests.TestSetup;
 

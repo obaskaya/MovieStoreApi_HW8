@@ -2,8 +2,8 @@
 using System.Xml.Linq;
 using AutoMapper;
 using FluentAssertions;
+using MovieStoreApi.Application.MovieOperations.Commands.UpdateMovie;
 using MovieStoreApi.Application.MovieOperations.CreateMovie;
-using MovieStoreApi.Application.MovieOperations.UpdateMovie;
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.Entities;
 using MovieStoreApi.UnitTests.TestSetup;

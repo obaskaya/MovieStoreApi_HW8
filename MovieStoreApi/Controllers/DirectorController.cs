@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using MovieStoreApi.Application.DirectorOperations.CreateDirector;
-using MovieStoreApi.Application.DirectorOperations.DeleteDirector;
-using MovieStoreApi.Application.DirectorOperations.GetDirectorDetail;
-using MovieStoreApi.Application.DirectorOperations.GetDirectors;
-using MovieStoreApi.Application.DirectorOperations.UpdateDirector;
+using MovieStoreApi.Application.DirectorOperations.Commands.CreateDirector;
+using MovieStoreApi.Application.DirectorOperations.Commands.DeleteDirector;
+using MovieStoreApi.Application.DirectorOperations.Commands.UpdateDirector;
+using MovieStoreApi.Application.DirectorOperations.Queries.GetDirectorDetail;
+using MovieStoreApi.Application.DirectorOperations.Queries.GetDirectors;
 using MovieStoreApi.DbOperations;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860

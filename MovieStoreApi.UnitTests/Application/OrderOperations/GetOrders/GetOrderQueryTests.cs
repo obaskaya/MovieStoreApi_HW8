@@ -1,13 +1,13 @@
 ﻿using System;
 using AutoMapper;
 using FluentAssertions;
-using MovieStoreApi.Application.OrderOperations.GetOrders;
+using MovieStoreApi.Application.OrderOperations.Queries.GetOrders;
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.UnitTests.TestSetup;
 
 namespace MovieStoreApi.UnitTests.Application.OrderOperations.GetOrders
 {
-	public class GetOrderQueryTests:IClassFixture<CommonTestFixture>
+    public class GetOrderQueryTests:IClassFixture<CommonTestFixture>
 	{
         private readonly MovieStoreDbContext _context;
         private readonly IMapper _mapper;

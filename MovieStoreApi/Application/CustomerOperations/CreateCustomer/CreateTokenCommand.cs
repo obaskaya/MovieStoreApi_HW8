@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Mail;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using MovieStoreApi.DbOperations;
@@ -37,7 +38,7 @@ namespace MovieStoreApi.Application.CustomerOperations.CreateCustomer
         }
         public class CreateTokenModel
         {
-            public string Email { get; set; }
+            public MailAddress Email { get; set; }
             public string Password { get; set; }
         }
     }

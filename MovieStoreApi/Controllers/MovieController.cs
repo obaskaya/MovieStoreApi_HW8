@@ -2,11 +2,11 @@
 using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using MovieStoreApi.Application.MovieOperations.CreateMovie;
-using MovieStoreApi.Application.MovieOperations.DeleteMovie;
-using MovieStoreApi.Application.MovieOperations.GetMovieDetail;
-using MovieStoreApi.Application.MovieOperations.GetMovies;
-using MovieStoreApi.Application.MovieOperations.UpdateMovie;
+using MovieStoreApi.Application.MovieOperations.Commands.CreateMovie;
+using MovieStoreApi.Application.MovieOperations.Commands.DeleteMovie;
+using MovieStoreApi.Application.MovieOperations.Commands.UpdateMovie;
+using MovieStoreApi.Application.MovieOperations.Queries.GetMovieDetail;
+using MovieStoreApi.Application.MovieOperations.Queries.GetMovies;
 using MovieStoreApi.DbOperations;
 
 

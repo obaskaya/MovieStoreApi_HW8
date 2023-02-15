@@ -1,6 +1,6 @@
 ﻿using System;
 using FluentAssertions;
-using MovieStoreApi.Application.MovieOperations.DeleteMovie;
+using MovieStoreApi.Application.MovieOperations.Commands.DeleteMovie;
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.UnitTests.TestSetup;
 

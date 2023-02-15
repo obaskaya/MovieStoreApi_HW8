@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using MovieStoreApi.Application.OrderOperations.CreateOrder;
-using MovieStoreApi.Application.OrderOperations.GetOrders;
+using MovieStoreApi.Application.OrderOperations.Commands.CreateOrder;
+using MovieStoreApi.Application.OrderOperations.Queries.GetOrders;
 using MovieStoreApi.DbOperations;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860

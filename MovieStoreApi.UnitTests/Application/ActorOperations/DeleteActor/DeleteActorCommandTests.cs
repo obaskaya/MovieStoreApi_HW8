@@ -1,6 +1,6 @@
 ﻿using System;
 using FluentAssertions;
-using MovieStoreApi.Application.ActorOperations.DeleteActor;
+using MovieStoreApi.Application.ActorOperations.Commands.DeleteActor;
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.Entities;
 using MovieStoreApi.UnitTests.TestSetup;

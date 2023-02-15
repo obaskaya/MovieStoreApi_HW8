@@ -2,7 +2,7 @@
 using AutoMapper;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
-using MovieStoreApi.Application.ActorOperations.CreateActor;
+using MovieStoreApi.Application.ActorOperations.Commands.CreateActor;
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.UnitTests.TestSetup;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;

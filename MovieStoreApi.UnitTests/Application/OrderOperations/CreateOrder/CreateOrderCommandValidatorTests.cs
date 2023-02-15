@@ -2,7 +2,7 @@
 using AutoMapper;
 using FluentAssertions;
 using MovieStoreApi.Application.CustomerOperations.CreateCustomer;
-using MovieStoreApi.Application.OrderOperations.CreateOrder;
+using MovieStoreApi.Application.OrderOperations.Commands.CreateOrder;
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.UnitTests.TestSetup;
 
