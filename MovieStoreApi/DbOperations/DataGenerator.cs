@@ -41,28 +41,28 @@ namespace MovieStoreApi.DbOperations
                     {
                         Name = "Batman Dark Knight",
                         Year = 2008,
-                        Actors = context.Actors.Where(c => new[] { 1, 2,3 }.Contains(c.Id)).ToList(),
+                        Actors = context.Actors.Where(c => new[] { 1, 2, 3 }.Contains(c.Id)).ToList(),
                         DirectorId = 1,
                         GenreId = 1,
-                        Price = 40
+                        Price = 20
                     },
                     new Movie
                     {
                         Name = "American Psycho",
                         Year = 2001,
-                        Actors = context.Actors.Where(c => new[] { 1,4,5 }.Contains(c.Id)).ToList(),
+                        Actors = context.Actors.Where(c => new[] { 1, 4, 5 }.Contains(c.Id)).ToList(),
                         DirectorId = 2,
                         GenreId = 2,
-                        Price = 60
+                        Price = 10
                     },
                     new Movie
                     {
                         Name = "Cars",
                         Year = 2006,
-                        Actors = context.Actors.Where(c => new[] { 6,7 }.Contains(c.Id)).ToList(),
+                        Actors = context.Actors.Where(c => new[] { 6, 7 }.Contains(c.Id)).ToList(),
                         DirectorId = 3,
                         GenreId = 3,
-                        Price = 80
+                        Price = 15
                     }
                     );
                 context.SaveChanges();

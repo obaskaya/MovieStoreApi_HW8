@@ -23,7 +23,7 @@ namespace MovieStoreApi.Controllers
             _context = context;
             _mapper = mapper;
         }
-        // GET: api/values
+        // GET: All Movies
         [HttpGet]
         public async Task <IActionResult> Get()
         {
@@ -33,7 +33,7 @@ namespace MovieStoreApi.Controllers
             return Ok(result);
         }
 
-        // GET api/values/5
+        // GET Movie Detail
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
@@ -45,7 +45,7 @@ namespace MovieStoreApi.Controllers
             return Ok(result);
         }
 
-        // POST api/values
+        // POST Movie
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateMovieModel newMovie)
         {
@@ -58,7 +58,7 @@ namespace MovieStoreApi.Controllers
             return Ok();
         }
 
-        // PUT api/values/5
+        // PUT Movie
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] UpdateMovieModel updateMovie)
         {
@@ -72,7 +72,7 @@ namespace MovieStoreApi.Controllers
             return Ok();
         }
 
-        // DELETE api/values/5
+        // DELETE Movie
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

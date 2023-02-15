@@ -22,7 +22,7 @@ namespace MovieStoreApi.Application.DirectorOperations.GetDirectorDetail
         {
             var director = _context.Directors.Include(c=> c.Movies).FirstOrDefault(c => c.Id == DirectorId);
             if (director == null)
-                throw new InvalidOperationException("Yönetmen mevcut değil");
+                throw new InvalidOperationException("Director doesn't exist in database");
 
             Model = _mapper.Map<DirectorViewModel>(director);
             return Model;

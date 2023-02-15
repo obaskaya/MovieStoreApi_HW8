@@ -22,7 +22,7 @@ namespace MovieStoreApi.Application.MovieOperations.GetMovieDetail
         {
             var movie = _context.Movies.Where(c=> !c.IsDeleted).Include(c=> c.Genre).Include(c => c.Director).Include(c => c.Actors).FirstOrDefault(c => c.Id == MovieId);
             if (movie == null)
-                throw new InvalidOperationException("Film mevcut değil");
+                throw new InvalidOperationException("Movie doesn't exists in database");
 
             Model = _mapper.Map<MovieViewModel>(movie);
             return Model;

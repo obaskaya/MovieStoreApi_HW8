@@ -21,7 +21,7 @@ namespace MovieStoreApi.Application.CustomerOperations.CreateCustomer
         {
             var customer = _context.Customers.FirstOrDefault(c => c.Name == Model.Name && c.Surname == Model.Surname);
             if (customer is not null)
-                throw new InvalidOperationException("Eklemek istediğiniz müşteri zaten var");
+                throw new InvalidOperationException("Customer already exist in database");
 
             customer = _mapper.Map<Customer>(Model);
             _context.Customers.Add(customer);

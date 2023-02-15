@@ -33,7 +33,7 @@ namespace MovieStoreApi.Application.CustomerOperations.CreateCustomer
                 return token;
             }
             else
-                throw new InvalidOperationException("Kullanıcı Adı - Şifre hatalı");
+                throw new InvalidOperationException("Username - Password wrong");
         }
         public class CreateTokenModel
         {

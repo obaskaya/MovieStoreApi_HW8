@@ -21,7 +21,7 @@ namespace MovieStoreApi.Application.ActorOperations.GetActorDetail
         {
             var actor = _context.Actors.Include(c=> c.Movies).FirstOrDefault(c => c.Id == ActorId);
             if (actor == null)
-                throw new InvalidOperationException("Aktör mevcut değil");
+                throw new InvalidOperationException("Actor doesn't exist in database");
 
             Model = _mapper.Map<ActorViewModel>(actor);
             return Model;

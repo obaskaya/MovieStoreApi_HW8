@@ -15,7 +15,7 @@ namespace MovieStoreApi.Application.MovieOperations.DeleteMovie
         {
             var movie = _context.Movies.FirstOrDefault(c => c.Id == MovieId && !c.IsDeleted);
             if (movie == null)
-                throw new InvalidOperationException("Silmek istediğiniz film mevcut değil");
+                throw new InvalidOperationException("Movie doesn't exists in database");
 
             movie.IsDeleted = true;
             //_context.Movies.Remove(movie);

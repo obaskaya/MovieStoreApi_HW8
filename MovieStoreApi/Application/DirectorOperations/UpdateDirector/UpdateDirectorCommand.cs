@@ -18,7 +18,7 @@ namespace MovieStoreApi.Application.DirectorOperations.UpdateDirector
         {
             var director = _context.Directors.FirstOrDefault(c => c.Id == DirectorId);
             if (director == null)
-                throw new InvalidOperationException("Yönetmen bulunamadı");
+                throw new InvalidOperationException("Director doesn't exist in database");
 
             director.Name = Model.Name != default ? Model.Name : director.Name;
             director.Surname = Model.Surname != default ? Model.Surname : director.Surname;

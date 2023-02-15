@@ -21,7 +21,7 @@ namespace MovieStoreApi.Application.DirectorOperations.CreateDirector
         {
             var director = _context.Directors.FirstOrDefault(c => c.Name == Model.Name && c.Surname == Model.Surname);
             if (director is not null)
-                throw new InvalidOperationException("Eklemek istediğiniz yönetmen mevcut");
+                throw new InvalidOperationException("Director already exists");
 
             director = _mapper.Map<Director>(Model);
             _context.Add(director);

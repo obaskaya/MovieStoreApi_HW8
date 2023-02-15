@@ -15,7 +15,7 @@ namespace MovieStoreApi.Application.CustomerOperations.DeleteCustomer
         {
             var customer = _context.Customers.FirstOrDefault(c => c.Id == CustomerId);
             if (customer == null)
-                throw new InvalidOperationException("Silmek istediğiniz müşteri bulunamadı");
+                throw new InvalidOperationException("Customer Couldn't found");
 
             _context.Customers.Remove(customer);
             await _context.SaveChangesAsync();

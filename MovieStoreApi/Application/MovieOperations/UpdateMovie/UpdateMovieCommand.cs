@@ -20,7 +20,7 @@ namespace MovieStoreApi.Application.MovieOperations.UpdateMovie
         {
             var movie = _context.Movies.Where(c => !c.IsDeleted).Include(c=> c.Genre).Include(c=> c.Actors).FirstOrDefault(c => c.Id == MovieId);
             if (movie == null)
-                throw new InvalidOperationException("Güncellemek istediğiniz film mevcut değil");
+                throw new InvalidOperationException("Movie doesn't exists in database");
 
 
             movie.Price = Model.Price != default ? Model.Price : movie.Price;

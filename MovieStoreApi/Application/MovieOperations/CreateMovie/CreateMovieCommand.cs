@@ -21,7 +21,7 @@ namespace MovieStoreApi.Application.MovieOperations.CreateMovie
         {
             var movie = _context.Movies.Where(c => !c.IsDeleted).FirstOrDefault(c => c.Name == Model.Name && c.DirectorId == Model.DirectorId);
             if (movie is not null)
-                throw new InvalidOperationException("Eklemek istediğiniz film zaten mevcut");
+                throw new InvalidOperationException("Movie already exist in database");
             movie = _mapper.Map<Movie>(Model);
             _context.Movies.Add(movie);
             foreach (var a in movie.Actors)

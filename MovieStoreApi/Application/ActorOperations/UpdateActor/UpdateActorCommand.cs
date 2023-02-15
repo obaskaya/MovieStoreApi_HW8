@@ -16,7 +16,7 @@ namespace MovieStoreApi.Application.ActorOperations.UpdateActor
         {
             var actor = _context.Actors.FirstOrDefault(c => c.Id == ActorId);
             if (actor == null)
-                throw new InvalidOperationException("Güncellemek istediğiniz aktör bulunamadı");
+                throw new InvalidOperationException("Actor doesn't exist in database");
 
             actor.Name = Model.Name != default ? Model.Name : actor.Name;
             actor.Surname = Model.Surname != default ? Model.Surname : actor.Surname;

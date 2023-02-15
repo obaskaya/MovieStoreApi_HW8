@@ -20,7 +20,7 @@ namespace MovieStoreApi.Application.ActorOperations.CreateActor
         {
             var actor = _context.Actors.FirstOrDefault(c => c.Name == Model.Name && c.Surname == Model.Surname);
             if (actor is not null)
-                throw new InvalidOperationException("Eklemek istediğiniz aktör zaten var");
+                throw new InvalidOperationException("Actor already exist in database");
 
             actor = _mapper.Map<Actor>(Model);
             _context.Actors.Add(actor);

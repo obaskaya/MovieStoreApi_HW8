@@ -19,7 +19,7 @@ namespace MovieStoreApi.Application.ActorOperations.DeleteActor
         {
             var actor = _context.Actors.FirstOrDefault(c => c.Id == ActorId);
             if (actor == null)
-                throw new InvalidOperationException("Silmek istediğiniz aktör mevcut değil");
+                throw new InvalidOperationException("Actor doesn't exist in database");
 
             _context.Actors.Remove(actor);
             await _context.SaveChangesAsync();

@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using Microsoft.Extensions.Configuration;
 using MovieStoreApi.Application.CustomerOperations.CreateCustomer;
+using MovieStoreApi.Application.CustomerOperations.DeleteCustomer;
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.TokenOperations.Models;
 using static MovieStoreApi.Application.CustomerOperations.CreateCustomer.CreateTokenCommand;
@@ -29,7 +31,7 @@ namespace MovieStoreApi.Controllers
             _configuration = configuration;
         }
 
-        // POST api/values
+        // POST Customer
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateCustomerModel newCustomer)
         {
@@ -41,6 +43,8 @@ namespace MovieStoreApi.Controllers
             await command.Handle();
             return Ok();
         }
+
+        //Create Token
         [HttpPost("connect/token")]
         public async Task<ActionResult<Token>> CreateToken([FromBody] CreateTokenModel login)
         {
@@ -49,6 +53,8 @@ namespace MovieStoreApi.Controllers
             var token = await command.Handle();
             return token;
         }
+
+        // update Token
         [HttpGet("refreshToken")]
         public async Task<ActionResult<Token>> RefreshToken([FromQuery] string token)
         {
@@ -57,10 +63,18 @@ namespace MovieStoreApi.Controllers
             var resultToken = await command.Handle();
             return resultToken;
         }
-        // DELETE api/values/5
+        // DELETE Customer
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            DeleteCustomerCommand command = new DeleteCustomerCommand (_context);
+            command.CustomerId = id;
+
+            DeleteCustomerCommandValidator validator = new DeleteCustomerCommandValidator();
+            validator.ValidateAndThrow(command);
+
+            await command.Handle();
+            return Ok();
         }
     }
 }

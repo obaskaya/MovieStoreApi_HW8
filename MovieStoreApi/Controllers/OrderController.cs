@@ -24,7 +24,7 @@ namespace MovieStoreApi.Controllers
             _mapper = mapper;
             _context = context;
         }
-        // GET: api/values
+        // GET: Order
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -33,7 +33,7 @@ namespace MovieStoreApi.Controllers
             return Ok(result);
         }
 
-        // POST api/values
+        // POST Order
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]CreateOrderModel newOrder)
         {
