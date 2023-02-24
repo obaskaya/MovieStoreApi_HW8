@@ -1,7 +1,7 @@
 ﻿using System;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using MovieStoreApi.Application.ActorOperations.GetActorDetail;
+
 using MovieStoreApi.DbOperations;
 
 namespace MovieStoreApi.Application.ActorOperations.Queries.GetActors

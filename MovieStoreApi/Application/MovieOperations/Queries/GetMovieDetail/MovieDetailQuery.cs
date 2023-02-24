@@ -32,7 +32,7 @@ namespace MovieStoreApi.Application.MovieOperations.Queries.GetMovieDetail
     public class MovieViewModel
     {
         public string Name { get; set; }
-        public DateTime PublishDate { get; set; }
+        public int Year { get; set; }
         public string Genre { get; set; }
         public string Director { get; set; }
         public ICollection<string> Actors { get; set; }

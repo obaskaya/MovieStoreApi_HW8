@@ -3,7 +3,7 @@ using System.Xml.Linq;
 using AutoMapper;
 using FluentAssertions;
 using MovieStoreApi.Application.MovieOperations.Commands.UpdateMovie;
-using MovieStoreApi.Application.MovieOperations.CreateMovie;
+
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.Entities;
 using MovieStoreApi.UnitTests.TestSetup;
@@ -25,7 +25,7 @@ namespace MovieStoreApi.UnitTests.Application.MovieOperations.UpdateMovie
         [InlineData(1, "name", 2000, 1, 0, 20)]
         [InlineData(0, "name", 2000, 1, 1, 20)]
 
-        public void WhenInvalidInputAreGiven_Validator_ShouldBeReturnErrors(int id, string name, int year, int genreId, int directorId, decimal price)
+        public void WhenInvalidInputAreGiven_Validator_ShouldBeReturnErrors(int id, string name, int year, int genreId, int directorId, double price)
         {
             UpdateMovieModel model = new UpdateMovieModel()
             {

@@ -3,7 +3,7 @@ using System.Numerics;
 using AutoMapper;
 using FluentAssertions;
 using MovieStoreApi.Application.ActorOperations.Commands.CreateActor;
-using MovieStoreApi.Application.DirectorOperations.CreateDirector;
+
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.Entities;
 using MovieStoreApi.UnitTests.TestSetup;

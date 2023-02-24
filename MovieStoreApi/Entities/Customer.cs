@@ -13,7 +13,7 @@ namespace MovieStoreApi.Entities
         public ICollection<Movie> PurchasedMovies { get; set; }
         public ICollection<Genre> FavoriteGenres { get; set; }
         
-        public MailAddress Email { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
         public string RefreshToken { get; set; }
         public DateTime? RefreshTokenExpireDate { get; set; }

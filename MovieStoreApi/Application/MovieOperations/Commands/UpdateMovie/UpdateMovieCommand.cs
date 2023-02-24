@@ -25,7 +25,7 @@ namespace MovieStoreApi.Application.MovieOperations.Commands.UpdateMovie
 
             movie.Price = Model.Price != default ? Model.Price : movie.Price;
             movie.Name = Model.Name != default ? Model.Name : movie.Name;
-            movie.PublishDate = Model.PublishDate != default ? Model.PublishDate : movie.PublishDate;
+            movie.Year = Model.Year != default ? Model.Year : movie.Year;
             movie.GenreId = Model.GenreId != default ? Model.GenreId : movie.GenreId;
             movie.DirectorId = Model.DirectorId != default ? Model.DirectorId : movie.DirectorId;
             movie.Actors.Clear();
@@ -41,7 +41,7 @@ namespace MovieStoreApi.Application.MovieOperations.Commands.UpdateMovie
     public class UpdateMovieModel
     {
         public string Name { get; set; }
-        public DateTime PublishDate { get; set; }
+        public int Year { get; set; }
         public int GenreId { get; set; }
         public int DirectorId { get; set; }
         public double Price { get; set; }

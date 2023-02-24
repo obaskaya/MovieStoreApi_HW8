@@ -10,7 +10,7 @@ using MovieStoreApi.Application.DirectorOperations.Queries.GetDirectors;
 using MovieStoreApi.Application.MovieOperations.Commands.CreateMovie;
 using MovieStoreApi.Application.MovieOperations.Queries.GetMovieDetail;
 using MovieStoreApi.Application.MovieOperations.Queries.GetMovies;
-using MovieStoreApi.Application.MovieOperations.UpdateMovie;
+
 using MovieStoreApi.Application.OrderOperations.Commands.CreateOrder;
 using MovieStoreApi.Application.OrderOperations.Queries.GetOrders;
 using MovieStoreApi.Entities;

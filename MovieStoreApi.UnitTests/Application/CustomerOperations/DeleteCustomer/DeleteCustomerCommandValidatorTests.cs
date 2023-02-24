@@ -19,7 +19,10 @@ namespace MovieStoreApi.UnitTests.Application.CustomerOperations.DeleteCustomer
             var customer = new Entities.Customer
             {
                 Name = "WhenActorIdLessThanZero_Validator_ShouldBeReturnError",
-                Surname = "WhenActorIdLessThanZero_Validator_ShouldBeReturnError"
+                Surname = "WhenActorIdLessThanZero_Validator_ShouldBeReturnError",
+                Email = "email",
+                Password = "pass",
+                RefreshToken = "token"
             };
             _context.Customers.Add(customer);
             _context.SaveChanges();
@@ -38,7 +41,10 @@ namespace MovieStoreApi.UnitTests.Application.CustomerOperations.DeleteCustomer
             var customer = new Entities.Customer
             {
                 Name = "ForHappyCodeCustomerDeleteValidator",
-                Surname = "ForHappyCodeCustomerDeleteValidator"
+                Surname = "ForHappyCodeCustomerDeleteValidator",
+                Email = "email",
+                Password = "pass",
+                RefreshToken = "token"
             };
             _context.Customers.Add(customer);
             _context.SaveChanges();

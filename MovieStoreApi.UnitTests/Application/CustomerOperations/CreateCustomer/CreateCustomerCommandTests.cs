@@ -3,6 +3,7 @@ using AutoMapper;
 using FluentAssertions;
 using MovieStoreApi.Application.CustomerOperations.CreateCustomer;
 using MovieStoreApi.DbOperations;
+using MovieStoreApi.Entities;
 using MovieStoreApi.UnitTests.TestSetup;
 
 namespace MovieStoreApi.UnitTests.Application.CustomerOperations.CreateCustomer
@@ -19,15 +20,14 @@ namespace MovieStoreApi.UnitTests.Application.CustomerOperations.CreateCustomer
         [Fact]
         public void WhenAlreadyExistCustomer_InvalidOperationException_ShouldBeReturn()
         {
-            var genre = new Entities.Genre
-            {
-                Name = "WhenAlreadyExistCustomer_InvalidOperationException_ShouldBeReturn"
-            };
-            _context.Genres.Add(genre);
+           
             var customer = new Entities.Customer
             {
                 Name = "WhenAlreadyExistCustomer_InvalidOperationException_ShouldBeReturn",
-                Surname = "WhenAlreadyExistCustomer_InvalidOperationException_ShouldBeReturn"
+                Surname = "WhenAlreadyExistCustomer_InvalidOperationException_ShouldBeReturn",
+                Email= "email",
+                Password="pass",
+                RefreshToken="token"
             };
             _context.Customers.Add(customer);
             _context.SaveChanges();
@@ -42,11 +42,16 @@ namespace MovieStoreApi.UnitTests.Application.CustomerOperations.CreateCustomer
         [Fact]
         public void WhenValidInputsAreGiven_Customer_ShouldBeCreated()
         {
+          
+
             CreateCustomerCommand command = new CreateCustomerCommand(_context, _mapper);
             CreateCustomerModel model = new CreateCustomerModel()
             {
                 Name = "ForHappyCodeCustomer",
-                Surname = "ForHappyCodeCustomer"
+                Surname = "ForHappyCodeCustomer",
+                Email = "email",
+                Password = "pass",
+                RefreshToken = "token"
             };
             command.Model = model;
 

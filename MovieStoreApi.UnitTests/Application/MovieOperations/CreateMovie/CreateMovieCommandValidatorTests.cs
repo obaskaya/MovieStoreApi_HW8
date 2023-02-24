@@ -18,11 +18,11 @@ namespace MovieStoreApi.UnitTests.Application.MovieOperations.CreateMovie
         }
         [Theory]
         [InlineData("name", 2000, 1, 2, 0)]
-        [InlineData("", 2000, 1, 2, 20)]
-        [InlineData("name", 1800, 1, 2, 20)]
-        [InlineData("name", 2000, 0, 2, 20)]
-        [InlineData("name", 2000, 1, 0, 20)]
-        public void WhenInvalidInputAreGiven_Validator_ShouldBeReturn(string name, int year, int genreId, int directorId, decimal price)
+        [InlineData("", 2000, 1, 2, 20.3)]
+        [InlineData("name", 1800, 1, 0, 20.4)]
+        [InlineData("name", 2000, 0, 2, 20.5)]
+        [InlineData("name", 2000, 1, 0, 20.6)]
+        public void WhenInvalidInputAreGiven_Validator_ShouldBeReturn(string name, int year, int genreId, int directorId, double price)
         {
             CreateMovieCommand command = new CreateMovieCommand(_context, _mapper);
             CreateMovieModel model = new CreateMovieModel

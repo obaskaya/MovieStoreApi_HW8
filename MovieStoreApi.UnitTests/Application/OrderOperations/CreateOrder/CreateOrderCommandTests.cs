@@ -23,7 +23,10 @@ namespace MovieStoreApi.UnitTests.Application.OrderOperations.CreateOrder
             var customer = new Entities.Customer
             {
                 Name = "WhenAlreadyExistCustomer_InvalidOperationException_ShouldBeReturn",
-                Surname = "WhenAlreadyExistCustomer_InvalidOperationException_ShouldBeReturn"
+                Surname = "WhenAlreadyExistCustomer_InvalidOperationException_ShouldBeReturn",
+                Email = "email",
+                Password = "pass",
+                RefreshToken = "token"
             };
             _context.Customers.Add(customer);
             _context.SaveChanges();

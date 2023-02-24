@@ -22,8 +22,10 @@ namespace MovieStoreApi.Application.MovieOperations.Commands.CreateMovie
             var movie = _context.Movies.Where(c => !c.IsDeleted).FirstOrDefault(c => c.Name == Model.Name && c.DirectorId == Model.DirectorId);
             if (movie is not null)
                 throw new InvalidOperationException("Movie already exist in database");
+
             movie = _mapper.Map<Movie>(Model);
             _context.Movies.Add(movie);
+
             foreach (var a in movie.Actors)
                 _context.Entry(a).State = EntityState.Unchanged;
             await _context.SaveChangesAsync();
@@ -33,7 +35,7 @@ namespace MovieStoreApi.Application.MovieOperations.Commands.CreateMovie
     public class CreateMovieModel
     {
         public string Name { get; set; }
-        public DateTime PublishDate { get; set; }
+        public int Year { get; set; }
         public int GenreId { get; set; }
         public int DirectorId { get; set; }
         public IEnumerable<int> Actors { get; set; }

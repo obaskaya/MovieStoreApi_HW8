@@ -44,7 +44,7 @@ namespace MovieStoreApi.DbOperations
                     new Movie
                     {
                         Name = "Batman Dark Knight",
-                        PublishDate = new DateTime(2006,04,03),
+                        Year = 2000,
                         Actors = context.Actors.Where(c => new[] { 1, 2, 3 }.Contains(c.Id)).ToList(),
                         DirectorId = 1,
                         GenreId = 1,
@@ -53,7 +53,7 @@ namespace MovieStoreApi.DbOperations
                     new Movie
                     {
                         Name = "American Psycho",
-                        PublishDate = new DateTime(2002, 01, 02),
+                        Year = 2004,
                         Actors = context.Actors.Where(c => new[] { 1, 4, 5 }.Contains(c.Id)).ToList(),
                         DirectorId = 2,
                         GenreId = 2,
@@ -62,7 +62,7 @@ namespace MovieStoreApi.DbOperations
                     new Movie
                     {
                         Name = "Cars",
-                        PublishDate = new DateTime(2001, 09, 27),
+                        Year = 2008,
                         Actors = context.Actors.Where(c => new[] { 6, 7 }.Contains(c.Id)).ToList(),
                         DirectorId = 3,
                         GenreId = 3,

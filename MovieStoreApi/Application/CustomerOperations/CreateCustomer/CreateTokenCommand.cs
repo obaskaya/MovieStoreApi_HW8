@@ -38,7 +38,7 @@ namespace MovieStoreApi.Application.CustomerOperations.CreateCustomer
         }
         public class CreateTokenModel
         {
-            public MailAddress Email { get; set; }
+            public string Email { get; set; }
             public string Password { get; set; }
         }
     }

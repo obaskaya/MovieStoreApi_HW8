@@ -1,7 +1,7 @@
 ﻿using System;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using MovieStoreApi.Application.DirectorOperations.CreateDirector;
+
 using MovieStoreApi.DbOperations;
 using MovieStoreApi.Entities;
 
