@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MovieStoreApi.Application.OrderOperations.Commands.CreateOrder;
 using MovieStoreApi.Application.OrderOperations.Queries.GetOrders;
@@ -13,6 +14,7 @@ using MovieStoreApi.DbOperations;
 
 namespace MovieStoreApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class OrderController : Controller
     {
